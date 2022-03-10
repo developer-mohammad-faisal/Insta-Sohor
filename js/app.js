@@ -35,6 +35,7 @@ const switchTab = (id) => {
         document.getElementById( "posts" ).style.display = "grid";
         document.getElementById( "liked" ).style.display = "none";
         document.getElementById( "reported" ).style.display = "none";
+        questionAnswere();
     } else if (id === "liked") {
         document.getElementById( "liked" ).style.display = "block";
         document.getElementById( "posts" ).style.display = "none";
@@ -143,6 +144,7 @@ const showPosts = (posts) => {
 };
 
 const displayLikedPosts = () => {
+  document.getElementById("answere").innerHTML = '';
   document.getElementById( "liked" ).innerHTML = '';
     const likedPosts = getLikedPosts();
     likedPosts.forEach((post) => {
@@ -152,6 +154,7 @@ const displayLikedPosts = () => {
 };
 
 const displayReportedPosts = () => {
+  document.getElementById("answere").innerHTML = '';
     const reportedPosts = getReportedPosts();
     reportedPosts.forEach((post) => {
         const div = createPost(post);
@@ -167,3 +170,18 @@ const loadPosts = async () =>{
 }
 
 loadPosts();
+
+const questionAnswere = () => {
+  const container = document.getElementById("answere")
+  container.innerHTML = `
+  <div>
+  <h2> <span class="Q-style">Question.1</span> How does javascript Work ? </h2>
+  <p></p>
+  <h2> <span class="Q-style">Question.3</span> How does javascript Work ? </h2>
+  <p></p>
+  <h2> <span class="Q-style">Question.3</span> How does javascript Work ? </h2>
+  <p></p>
+</div>
+  `
+}
+questionAnswere();
