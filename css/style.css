@@ -256,3 +256,10 @@ img {
     grid-template-columns: repeat(1, 1fr);
   }
 }
+
+/* Question style */
+.Q-style{
+  color: mediumpurple;
+  font-weight: 600;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
