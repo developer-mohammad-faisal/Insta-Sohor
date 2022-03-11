@@ -182,6 +182,6 @@ const questionAnswere = () => {
   <h2> <span class="Q-style">Question.3</span> How does javascript Work ? </h2>
   <p></p>
 </div>
-  `
+  `;
 }
 questionAnswere();
