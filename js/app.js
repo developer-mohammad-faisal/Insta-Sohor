@@ -144,7 +144,7 @@ const showPosts = (posts) => {
 };
 
 const displayLikedPosts = () => {
-  document.getElementById("answere").innerHTML = '';
+  document.getElementById("question-answere").innerHTML = '';
   document.getElementById( "liked" ).innerHTML = '';
     const likedPosts = getLikedPosts();
     likedPosts.forEach((post) => {
@@ -154,7 +154,7 @@ const displayLikedPosts = () => {
 };
 
 const displayReportedPosts = () => {
-  document.getElementById("answere").innerHTML = '';
+  document.getElementById("question-answere").innerHTML = '';
     const reportedPosts = getReportedPosts();
     reportedPosts.forEach((post) => {
         const div = createPost(post);
@@ -172,15 +172,35 @@ const loadPosts = async () =>{
 loadPosts();
 
 const questionAnswere = () => {
-  const container = document.getElementById("answere")
+  const container = document.getElementById("question-answere")
   container.innerHTML = `
-  <div>
-  <h2> <span class="Q-style">Question.1</span> How does javascript Work ? </h2>
-  <p></p>
-  <h2> <span class="Q-style">Question.3</span> How does javascript Work ? </h2>
-  <p></p>
-  <h2> <span class="Q-style">Question.3</span> How does javascript Work ? </h2>
-  <p></p>
+      
+  <div class="row row-cols-1 row-cols-md-3 g-4">
+  <div class="col">
+    <div class="card shadow-lg rounded-2">
+      <div class="card-body">
+        <h5 class="card-title">How does work in javascript?</h5>
+        <p class="card-text">Javascript হল একটি Scripting language. Browser এর Behaviour Control কে লক্ষ্য করে একে ডিজাইন করা হয়েছে। বর্তমানে এটি Browser ছাড়াও যেকোন Operating System Run করে।  এবং জাভাস্ক্রিপ্ট হল একটি হাই লেভেল Programming Language. Javascript Chrome Browser এর মধ্যে Execute করার জন্য V8 Engine Use করে। Microsoft Edge browser এর জন্য Chakra ইন্জিন use করে। Firefox browser এর জন্য Spidermonkey ইন্জিন করে। এখন কে কোন browser এর জন্য use করবে সেটা সম্পুর্ণ Web Developer এর উপর নির্ভর করে। HTML এর সাথে CSS, Javascript Code link করে DOM এর সাথে  Parse করে UI তে দেখানো হয়।</p>
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="card shadow-lg rounded-2">
+      <div class="card-body">
+        <h5 class="card-title">How does the javascript event loop work?</h5>
+        <p class="card-text">Javascript হল একটি Single Threated Language এবং Javascript Asynchronous Language ও বলা হয়। Javascript ইঞ্জিন কোডগুলো Asynchronous ভাবে একের পর এক Execute করে। অথবা আমরা চাইলে লাইনের মধ্যে setTimeout দিয়ে Asynchronous ভাবে মাঝখানে যদি একটা function কে setTimeOut দিয়ে একটা নির্দিষ্ট সময়ের পর আনতে পারি, এটিকে javascript engin এ নোট করে রাখবে, নির্দিষ্ট সময় পর function টাকে লাইনে ঢুকিয়ে দিবে। অন্যান্য Language এর সাথে জাভাস্ক্রিপ্টের পার্থক্য হল নন ব্লকিং বৈশিষ্ট্য। জাভাস্ক্রিপ্ট ইন্জিন কখনোই একসাথে একটার বেশি স্টেটমেন্ট প্রোসেস করবে না। এটাই হল জাভাস্ক্রিপ্ট ইভেন্ট লুপ।</p>
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="card shadow-lg rounded-2">
+      <div class="card-body">
+        <h5 class="card-title">What will be different in Local storage and Session storage</h5>
+        <p class="card-text"><span class="fw-bold">Local storage:</span> এর ডাটা স্হায়ী ভাবে ব্রাউজারে থাকে। যদি অন্য ট্যাবে বা ট্যবাটি যদি বন্ধ করে দেওয়া হয় তাও ডাটাগুলো ব্রাউজারে থাকবে। Event যদি পুরো কম্পিউটার টা অফ করে রিসেট দিয়েও ওই ট্যাবে যায় তাহলেও থেকে যাবে ডাটা। আর ডাটা গুলো key and value আকারে store থাকে ব্রাউজারে। value গুলো string হয়ে থাকে। আমরা চাইলে ডাটা গুলো কে Change, Update, বা নতুন ডাটা এড করতে পারি কোড করে।
+         <span class="fw-bold">Session Storage:</span> এর ডাটা অস্হায়ী ভাবে থাকে ব্রাউজারে। সেই ট্যাবটা যদি ক্লোজ করে দেওয়া হয় তাহলে সেগুলো চলে যায়।  নির্দিষ্ট সময়ের জন্য ডাটা হুলো লোড হয়ে থাকে।</p>
+      </div>
+    </div>
+  </div>
 </div>
   `;
 }
